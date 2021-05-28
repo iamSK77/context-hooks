@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AddSongForm } from './NewSongForm';
 
 export const Lists = () => {
     let id = 0;
@@ -21,6 +22,8 @@ export const Lists = () => {
             </ul>
             <br />
             <button onClick={addSong}>AddSong</button>
+            <br />
+            <AddSongForm />
         </div>
     );
 };
