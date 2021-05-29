@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
-export const AddSongForm = () => {
+export const AddSongForm = ({ addSong }) => {
     const [title, setTitle] = useState('');
+
     const onSubmit = e => {
         e.preventDefault();
-
+        addSong(title);
+        setTitle('');
     };
 
     return (

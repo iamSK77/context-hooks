@@ -9,8 +9,8 @@ export const Lists = () => {
         { title: "almost home", id: 3 },
     ]);
 
-    const addSong = () => {
-        setSongs([...songs, { title: "blinded by the lights", id: id }]);
+    const addSong = (title) => {
+        setSongs([...songs, { title: title, id: id }]);
     };
 
     return (
@@ -21,9 +21,8 @@ export const Lists = () => {
                 ))}
             </ul>
             <br />
-            <button onClick={addSong}>AddSong</button>
             <br />
-            <AddSongForm />
+            <AddSongForm addSong={addSong} />
         </div>
     );
 };
